@@ -4,7 +4,9 @@ import './OrderInfo.css';
 
 function OrderInfo() {
     return (
-    <h3>info</h3>
+        <div>
+    <h2>Order info</h2>
+    </div>
     )
 }
 export default OrderInfo;
