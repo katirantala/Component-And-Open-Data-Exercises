@@ -1,3 +1,16 @@
 h1 {
-    color: green;
+    color: black;
+}
+
+.Header{
+    display: flex; /* Käytetään flexboxia */
+  align-items: center; /* Keskitetään pystysuunnassa */
+}
+.circle-image {
+    width: 80px; /* Tai haluamasi leveys */
+    height: 80px; /* Sama korkeus kuin leveys ympyrän muotoiseksi */
+    border-radius: 50%; /* Tämä tekee kuvasta ympyrän muotoisen */
+    object-fit: cover; /* Tämä varmistaa, että kuva säilyttää suhteensa */
+    border: 2px solid black; /
+    
 }
