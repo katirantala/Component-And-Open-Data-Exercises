@@ -14,7 +14,7 @@ const Header = ({ image, title }) => {
 };
 
 function ComponentUI() {
-    const [selectedProduct, setSelectedProduct] = useState(null); // Huomaa 's' pienellä
+    const [selectedProduct, setSelectedProduct] = useState(null);
     const [count, setCount] = useState(0);
 
     return (
@@ -24,7 +24,7 @@ function ComponentUI() {
                 setSelectedProduct={setSelectedProduct} 
                 setCount={setCount} 
                 count={count} 
-                selectedProduct={selectedProduct} // Lisää tämä rivi
+                selectedProduct={selectedProduct}
             />
             {selectedProduct && (
                 <OrderInfo 
