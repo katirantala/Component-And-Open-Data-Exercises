@@ -10,14 +10,12 @@ const products = [
 
 //Function for select product
 
-function OrderForm() {
-    const [selectedProduct, setSelectedProduct] = useState(''); 
-    const [count, setCount] = useState(0)
-
+function OrderForm({setSelectedProduct, setCount, count }) {
     const handleChange = (e) => {
         const productId = parseInt(e.target.value);
         const product = products.find(p => p.id === productId);
         setSelectedProduct(product);
+        setCount(0);
     };
     //Counter funktions
         const addCount = () => { setCount(count + 1); };
@@ -27,8 +25,9 @@ function OrderForm() {
     return (
         <div>
             <h2>Select Product</h2>
+            <p>
             Product: {' '} 
-            <select onChange={handleChange} value={selectedProduct ? selectedProduct.id : ''}>
+            <select onChange={handleChange}>
                 <option value="" disabled>Select...</option>
                 {products.map(product => (
                     <option key={product.id} value={product.id}>
@@ -43,6 +42,7 @@ function OrderForm() {
             <label>{count}</label>
             {' '}
             <button onClick={addCount}>+</button>
+            </p>
         </div>
     );
 }
