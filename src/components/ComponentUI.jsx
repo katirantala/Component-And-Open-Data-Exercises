@@ -7,14 +7,14 @@ import OrderInfo from './OrderInfo.jsx';
 const Header = ({ image, title }) => {
   return (
     <div className='Header'>
-      <img src={image} alt={title} className="circle-image"/>
+      <img src={image} alt={title} className="circle-image" />
       <h1>{title}</h1>
     </div>
   );
 };
 
 function ComponentUI() {
-    const [SelectedProduct, setSelectedProduct] = useState(null);
+    const [selectedProduct, setSelectedProduct] = useState(null); // Huomaa 's' pienellä
     const [count, setCount] = useState(0);
 
     return (
@@ -24,11 +24,12 @@ function ComponentUI() {
                 setSelectedProduct={setSelectedProduct} 
                 setCount={setCount} 
                 count={count} 
+                selectedProduct={selectedProduct} // Lisää tämä rivi
             />
-            {SelectedProduct && (
+            {selectedProduct && (
                 <OrderInfo 
-                    productName={SelectedProduct.name} 
-                    price={SelectedProduct.price} 
+                    productName={selectedProduct.name} 
+                    price={selectedProduct.price} 
                     quantity={count} 
                 />
             )}

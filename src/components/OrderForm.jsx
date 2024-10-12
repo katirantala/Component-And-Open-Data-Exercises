@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './OrderForm.css';
 
 //Products
@@ -9,39 +8,38 @@ const products = [
 ];
 
 //Function for select product
-
-function OrderForm({setSelectedProduct, setCount, count }) {
+function OrderForm({ setSelectedProduct, setCount, count, selectedProduct }) {
     const handleChange = (e) => {
         const productId = parseInt(e.target.value);
         const product = products.find(p => p.id === productId);
         setSelectedProduct(product);
         setCount(0);
     };
-    //Counter funktions
-        const addCount = () => { setCount(count + 1); };
-        
-        const decreaseCount = () => { setCount(count > 0 ? count - 1 : 0);};
+
+    //Counter functions
+    const addCount = () => { setCount(count + 1); };
+    const decreaseCount = () => { setCount(count > 0 ? count - 1 : 0); };
 
     return (
         <div>
             <h2>Select Product</h2>
             <p>
-            Product: {' '} 
-            <select onChange={handleChange}>
-                <option value="" disabled>Select...</option>
-                {products.map(product => (
-                    <option key={product.id} value={product.id}>
-                        {product.name} ({product.price}€)
-                    </option>
-                ))}
-            </select><br></br>
-            <br></br>
-            Quantity: {' '}
-            <button onClick={decreaseCount}>-</button>
-            {' '}
-            <label>{count}</label>
-            {' '}
-            <button onClick={addCount}>+</button>
+                Product: {' '}
+                <select onChange={handleChange} value={selectedProduct ? selectedProduct.id : ''}>
+                    <option value="" disabled>Select...</option>
+                    {products.map(product => (
+                        <option key={product.id} value={product.id}>
+                            {product.name} ({product.price}€)
+                        </option>
+                    ))}
+                </select><br></br>
+                <br></br>
+                Quantity: {' '}
+                <button onClick={decreaseCount}>-</button>
+                {' '}
+                <label>{count}</label>
+                {' '}
+                <button onClick={addCount}>+</button>
             </p>
         </div>
     );
