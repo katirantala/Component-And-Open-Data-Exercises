@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './Opendata.css';
 
 function DogImage() {
    const [imageUrl, setImageUrl] = useState('');
@@ -15,10 +16,10 @@ function DogImage() {
 
    return (
       <div>
-         <h1>Hauvaenergiaa! <br/></h1>
+         <h1>Hauvaenergiaa!</h1><br/>
           <h3>Painamalla nappia näet päivän kuvan.</h3>
          <button onClick={fetchDogImage}>Klikkaa</button>
-         <div style={{ marginTop: '20px' }}>
+         <div className='image'>
             {imageUrl && <img src={imageUrl} alt="Random Dog"/>}
          </div>
       </div>
