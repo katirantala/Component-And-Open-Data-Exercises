@@ -1,13 +1,13 @@
-
 div {
     text-align: 'center';
     margin-top: '20px'; 
 }
 
-.image{
-width: 200px;
-height: 200px; 
+.image img{
+width: 300px;
+height: auto; 
 object-fit: cover;
+border-radius: 10px;
 }
 
 .button {
