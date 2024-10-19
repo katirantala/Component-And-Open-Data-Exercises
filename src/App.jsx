@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ComponentUI from './components/ComponentUI';
+import DogImage from './components/Opendata';
 
 function App() {
   
@@ -8,6 +9,7 @@ function App() {
     <>
       <div>
         <ComponentUI />
+        <DogImage />
       </div>
     </>
   )

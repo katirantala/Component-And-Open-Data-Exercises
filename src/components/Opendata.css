@@ -1,0 +1,20 @@
+div {
+    text-align: 'center';
+    margin-top: '20px'; 
+}
+
+.image img{
+width: 300px;
+height: auto; 
+object-fit: cover;
+border-radius: 10px;
+}
+
+.button {
+    color: black;
+    font-size: 16px;
+    height: 40px;
+    width: 70px;
+    margin-bottom: 8px; 
+
+}
