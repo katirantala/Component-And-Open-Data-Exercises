@@ -1,6 +1,7 @@
 .Header{
     display: flex; 
     align-items: center; 
+    margin: 20px;
 }
 .circle-image {
     width: 80px;
