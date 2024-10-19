@@ -18,7 +18,7 @@ function DogImage() {
       <div>
          <h1>Hauvaenergiaa!</h1><br/>
           <h3>Painamalla nappia näet päivän kuvan.</h3>
-         <button onClick={fetchDogImage}>Klikkaa</button>
+         <button className='button' onClick={fetchDogImage}>Klikkaa</button>
          <div className='image'>
             {imageUrl && <img src={imageUrl} alt="Random Dog"/>}
          </div>
